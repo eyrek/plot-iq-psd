@@ -26,11 +26,13 @@ def plot_iq(iq, np_data_type, frequency, sample_rate):
     fft_array = np.fft.fftshift(fft_array)
     db_array = 20*np.log10(abs(fft_array))
     #Fill the x axis with correct frequency values
-    x_vals = np.arange( frequency - sample_rate/2.0, 
-        frequency + sample_rate /2.0, sample_rate/float(fft_bins))
-    #Plot DB values
+    x_vals = np.linspace(frequency - sample_rate/2.0, frequency + sample_rate /2.0, num=fft_bins)
+    #Plot dB values
     plt.plot(x_vals, db_array)
-    plt.ylim(min(db_array), max(db_array))
+    #Label axes
+    plt.xlabel("Frequency (Hz)")
+    plt.ylabel("dB")
+    #plt.ylim(min(db_array), max(db_array))
 
     plt.show()
 
