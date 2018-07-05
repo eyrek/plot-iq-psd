@@ -4,9 +4,9 @@ Simple Python script to plot the PSD of Complex Float I/Q data
 ### Dependencies
 Matplotlib:
 
-python -mpip install -U pip
+python -m pip install -U pip
 
-python -mpip install -U matplotlib
+python -m pip install -U matplotlib
 
 Tested on Python 2.7.12
 
